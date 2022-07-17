@@ -1,4 +1,6 @@
 // we use class to represent entities like User/Article/etc.
+import instance from "./request";
+
 class User {
     constructor ({ name, phone, email, description, isAdmin}) {
         this.name = name;
@@ -12,6 +14,9 @@ class User {
         // signup & signin & update
         // save to backend
         // if (this.checkValid()) { // save to backend }
+        instance({}).then(res => {
+            // code
+        })
     }
 
     update({ name, phone, email, description, isAdmin }, immediate = true) {
