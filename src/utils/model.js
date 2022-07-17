@@ -1,5 +1,5 @@
 // we use class to represent entities like User/Article/etc.
-import instance from "./request";
+import { add, update } from "@/api/User";
 
 class User {
     constructor ({ name, phone, email, description, isAdmin}) {
@@ -14,9 +14,10 @@ class User {
         // signup & signin & update
         // save to backend
         // if (this.checkValid()) { // save to backend }
-        instance({}).then(res => {
-            // code
-        })
+        
+        add()
+        // or 
+        update()
     }
 
     update({ name, phone, email, description, isAdmin }, immediate = true) {
